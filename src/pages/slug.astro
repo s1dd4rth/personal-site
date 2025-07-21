@@ -1,0 +1,7 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+const { title = 'Post – The Product Guy', description = 'A post by Siddarth Kengadaran', ogImage = 'https://theproductguy.xyz/og-image.jpg' } = Astro.props;
+---
+<MainLayout title={title} description={description} ogImage={ogImage}>
+  <!-- Post content here -->
+</MainLayout>

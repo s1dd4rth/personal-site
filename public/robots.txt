@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://theproductguy.xyz/sitemap.xml 

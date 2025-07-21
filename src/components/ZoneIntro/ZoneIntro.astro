@@ -1,0 +1,47 @@
+---
+import ResponsiveZoneIntro from './ResponsiveZoneIntro.jsx';
+import DraggableTimeline from './DraggableTimeline.jsx';
+import ProcessDiagram from './ProcessDiagram.jsx';
+---
+
+<section id="hero" style="position: relative; min-height: 100vh; width: 100vw; overflow-x: hidden; padding: clamp(1rem, 4vw, 3rem) 0;">
+  <ResponsiveZoneIntro client:load />
+  <div id="scroll-indicator" style="position: absolute; left: 50%; bottom: 10vh; transform: translateX(-50%); z-index: 50; transition: opacity 0.4s;">
+    <button
+      aria-label="Scroll to timeline"
+      style="background: none; border: none; cursor: pointer; outline: none; display: flex; flex-direction: column; align-items: center; gap: 4px;"
+      onclick="document.getElementById('timeline-section').scrollIntoView({ behavior: 'smooth' })"
+    >
+      <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="18" cy="18" r="18" fill="#fff" fill-opacity="0.85"/>
+        <path d="M12 16l6 6 6-6" stroke="#222" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span style="font-family: var(--font-sans); font-size: 1rem; color: #222; opacity: 0.7;">Scroll down</span>
+    </button>
+  </div>
+  <script is:inline>
+    window.addEventListener('scroll', () => {
+      const indicator = document.getElementById('scroll-indicator');
+      if (!indicator) return;
+      if (window.scrollY > 40) {
+        indicator.style.opacity = '0';
+        indicator.style.pointerEvents = 'none';
+      } else {
+        indicator.style.opacity = '1';
+        indicator.style.pointerEvents = 'auto';
+      }
+    });
+  </script>
+</section>
+
+<section id="timeline-section" style="position: relative; min-height: 80vh; width: 100vw; background: none; overflow-x: hidden; padding: clamp(1rem, 4vw, 3rem) 0;">
+  <div style="text-align: center; margin-bottom: 2rem;">
+    <h2 style="font-family: var(--font-marker); font-size: clamp(1.3rem, 5vw, 2.2rem); font-weight: 800; color: #222; margin-bottom: 0.5rem; letter-spacing: -1px;">My journey</h2>
+    <div style="font-family: var(--font-marker); font-size: clamp(1rem, 3vw, 1.35rem); color: #222; font-weight: 600; letter-spacing: -1px;">Code &rarr; Design &rarr; Strategy</div>
+  </div>
+  <DraggableTimeline client:load />
+</section>
+
+<section id="process-section" style="position: relative; min-height: 40vh; width: 100vw; background: none; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: clamp(1.5rem, 6vw, 3rem) 0 clamp(1rem, 4vw, 2rem) 0; overflow-x: hidden;">
+  <ProcessDiagram />
+</section>
