@@ -18,12 +18,10 @@ jobs:
         with:
           node-version: 20
       - run: npm ci
-        working-directory: ./minimal
       - run: npm run build
-        working-directory: ./minimal
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: ./minimal/dist
+          path: ./dist
 
   deploy:
     needs: build
