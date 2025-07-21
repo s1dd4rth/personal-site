@@ -1,0 +1,16 @@
+{
+  "name": "The Product Guy – Siddarth Kengadaran",
+  "short_name": "Product Guy",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f8fafc",
+  "theme_color": "#3245FF",
+  "description": "Portfolio and blog of Siddarth Kengadaran – Product, Strategy, Design.",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+} 

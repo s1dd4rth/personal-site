@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <!-- Sticky note base -->
+  <rect x="8" y="8" width="112" height="112" rx="14" fill="#FFE066" stroke="#E6C200" stroke-width="3"/>
+  <!-- Folded corner -->
+  <polygon points="120,120 96,120 120,96" fill="#FFF9C4" stroke="#E6C200" stroke-width="2"/>
+  <!-- Marker-style SK -->
+  <text x="50%" y="60%" text-anchor="middle" font-family="'Permanent Marker', 'Comic Sans MS', cursive, sans-serif" font-size="48" fill="#222" transform="rotate(-8 64 64)">SK</text>
+</svg>
