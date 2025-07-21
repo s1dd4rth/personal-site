@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 
 const INSTAGRAM_USERNAME = 'theproductguy.xyz';
-const ACCESS_TOKEN = import.meta.env.PUBLIC_INSTAGRAM_ACCESS_TOKEN; // Set this in your .env file
+const ACCESS_TOKEN = IGAATd8GZAxJtlBZAE9EaVBMVEdFX3lLeVpHN0hnZA2QzMFIxNFloTzItY0FIYmNzR0FnTlItYXQ3elBTMUlGUnRYTUwyUWM3Sl85eXYtTnVic2RfVElQWkdPc090UHJieFZAoclBhWWFVTDVENXVuVEdjeXBtTUltaVJaWDB4X3IxVQZDZD
+
 
 export default function InstagramPhotoWall() {
   const [photos, setPhotos] = useState([]);
